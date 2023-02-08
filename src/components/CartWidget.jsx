@@ -5,8 +5,7 @@ const CartWidget = () => {
   return (
     <div>
     <Button colorScheme='teal' size='md'>
-    Shopping Cart 
-  
+ 
     <span className="material-symbols-outlined">
 shopping_cart
 </span>

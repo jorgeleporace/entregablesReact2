@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <NavBar/>
-      <ItemListContainer greeting = "Bienvenidos"/>
+      <ItemListContainer greeting = "Bienvenidos a www.onlinegls.com"/>
     </>
     
   )
