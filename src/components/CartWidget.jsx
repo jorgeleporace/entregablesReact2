@@ -4,11 +4,12 @@ import React from 'react'
 const CartWidget = () => {
   return (
     <div>
-    <Button colorScheme='teal' size='md'>
+    <Button colorScheme='teal' size='md' justifyContent='flex-end'>
  
     <span className="material-symbols-outlined">
 shopping_cart
 </span>
+<span>5</span>
 </Button>
 </div>
   )
