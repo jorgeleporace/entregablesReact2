@@ -16,7 +16,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 
 const data = {
 isNew: true,
-imageURL:'/public/Codeando.jpeg',
+imageURL:'/Codeando.jpeg',
 name: 'English For Developers',
 price: 400.5,
 rating: 4.2,
