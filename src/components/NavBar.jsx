@@ -20,6 +20,7 @@ import {
   Img,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Links = ['Our Courses', 'Translations', 'Our Team'];
 
@@ -58,7 +59,7 @@ export default function Simple() {
             <Image
               borderRadius='full'
               boxSize='60px'
-              src='/Logo_gls_512.png'
+              src='/src/images/Logo_gls_512.png'
               alt='Global Language Solutions'
               />
             </Box>

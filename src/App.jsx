@@ -1,21 +1,28 @@
-import { useState } from 'react'
-import './App.css'
-import { BrowserRouter, Routes } from 'react-router-dom';
-import React from 'react'
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
-import ItemListContainer2 from './components/ItemListContainer2'
+import { useState } from 'react';
+import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import NavBar from './components/NavBar';
+import Welcome from './components/Welcome';
+import ItemListContainer from './components/ItemListContainer';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <NavBar/>
-      <Routes>
-        <ItemListContainer greeting = "Bienvenidos a www.onlinegls.com"/>
-        <ItemListContainer2/>
-      </Routes>
+        <NavBar/>
+		
+        <Routes>
+			
+			<Route exact path="/Welcome" element={<Welcome greeting = "Bienvenidos a www.onlinegls.com"/>}/>
+			<Route exact path="/" element={<Welcome greeting = "Bienvenidos a www.onlinegls.com"/>}/>
+			<Route exact path="/Home" element={<ItemListContainer/>}/>
+			
+         
+			
+        </Routes>
+		<footer/>
     </BrowserRouter>
   );
 }
 
-export default App
+export default App 
