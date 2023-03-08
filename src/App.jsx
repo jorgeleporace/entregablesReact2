@@ -5,6 +5,7 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import Welcome from './components/Welcome';
 import ItemListContainer from './components/ItemListContainer';
+import Home from './components/Home';
 
 const App = () => {
   return (
@@ -13,9 +14,9 @@ const App = () => {
 		
         <Routes>
 			
-			<Route exact path="/Welcome" element={<Welcome greeting = "Bienvenidos a www.onlinegls.com"/>}/>
-			<Route exact path="/" element={<Welcome greeting = "Bienvenidos a www.onlinegls.com"/>}/>
-			<Route exact path="/Home" element={<ItemListContainer/>}/>
+			
+			<Route exact path="/" element={<Home/>}/>
+			
 			
          
 			
