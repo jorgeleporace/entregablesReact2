@@ -19,31 +19,9 @@ import {
   Img,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Link as RouterLink } from "react-router-dom";
-import {
-  Spacer,
-  Heading,
-  Container,
-} from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
+import { Spacer, Heading, Container } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-
-const Links = ["Our Courses", "Translations", "Our Team"];
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    href={"#"}
-  >
-    {children}
-  </Link>
-);
-
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -61,14 +39,12 @@ export default function Simple() {
 
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-
               <Image
                 borderRadius="full"
                 boxSize="60px"
                 src="/src/images/Logo_gls_512.png"
                 alt="Global Language Solutions"
               />
-
             </Box>
             <Box p="10" w="300px" h="100">
               <Heading size="md">
@@ -79,14 +55,11 @@ export default function Simple() {
               as={"nav"}
               spacing={4}
               display={{ base: "none", md: "flex" }}
-            >
-
-
-            </HStack>
+            ></HStack>
           </HStack>
           <Box>
             <Menu>
-              <Link to={"/translations"}>
+              <Link as={NavLink} to={"/translations"}>
                 <MenuButton
                   as={Button}
                   size="lg"
@@ -99,7 +72,7 @@ export default function Simple() {
               </Link>
             </Menu>
             <Menu>
-              <Link to={"/ourteam"}>
+              <Link as={NavLink} to={"/ourteam"}>
                 <MenuButton
                   as={Button}
                   size="lg"
@@ -123,13 +96,13 @@ export default function Simple() {
                 Our Courses
               </MenuButton>
               <MenuList className="menu-list">
-                <Link to={`/courses/${"Beginner"}`}>
+                <Link as={NavLink} to={`/courses/${"Beginner"}`}>
                   <MenuItem>Principiante</MenuItem>
                 </Link>
-                <Link to={`/category/${"Intermidiate"}`}>
+                <Link as={NavLink} to={`/courses/${"Intermidiate"}`}>
                   <MenuItem>Intermedio</MenuItem>
                 </Link>
-                <Link to={`/category/${"All"}`}>
+                <Link as={NavLink} to={"/courses"}>
                   <MenuItem>TODOS</MenuItem>
                 </Link>
               </MenuList>
@@ -158,9 +131,7 @@ export default function Simple() {
 
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
-
-            </Stack>
+            <Stack as={"nav"} spacing={4}></Stack>
           </Box>
         ) : null}
       </Box>
