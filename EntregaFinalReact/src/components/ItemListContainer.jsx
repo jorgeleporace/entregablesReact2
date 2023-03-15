@@ -9,7 +9,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     const db = getFirestore();
-    const coursesCollection = collection(db, "courses");
+    const coursesCollection = collection(db, "cursoDeIngles");
 	console.log (coursesCollection)
     getDocs(coursesCollection).then((querySnapshot) => {
       const courses = querySnapshot.docs.map((doc) => ({
@@ -19,8 +19,8 @@ const ItemListContainer = () => {
       setCourses(courses);
     });
   }, []);
-
-  const nameFilter = courses.filter((course) => course.name === category);
+console.log (courses)
+  const nameFilter = courses.filter((course) => course.category === category);
 
   return (
     <div>

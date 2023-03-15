@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-const Item = ({ id, name, stock, category, image }) => {
+const Item = ({ id, name, level, description, category, price, image }) => {
   return (
     <div>
       <div key={id}>
@@ -27,8 +27,17 @@ const Item = ({ id, name, stock, category, image }) => {
                 <Text color="blue.800" fontSize="l">
                   Category: {category}
                 </Text>
+				<Text color="blue.800" fontSize="l">
+                  CourseName: {name}
+                </Text>
+				<Text color="blue.800" fontSize="l">
+                  Description: {description}
+                </Text>
+				<Text color="blue.800" fontSize="l">
+                  CoursePrice: {price}
+                </Text>
                 <Text color="red.600" fontSize="xl">
-                  Stock: {stock}
+                  Level: {level}
                 </Text>
               </Stack>
             </CardBody>

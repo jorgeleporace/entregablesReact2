@@ -22,6 +22,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
 import { Spacer, Heading, Container } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -48,7 +49,7 @@ export default function Simple() {
             </Box>
             <Box p="10" w="300px" h="100">
               <Heading size="md">
-                <Link to={"/"}>GLS</Link>
+                <Link to={"/"}>HOME</Link>
               </Heading>
             </Box>
             <HStack
@@ -97,13 +98,13 @@ export default function Simple() {
               </MenuButton>
               <MenuList className="menu-list">
                 <Link as={NavLink} to={`/courses/${"Beginner"}`}>
-                  <MenuItem>Principiante</MenuItem>
+                  <MenuItem>Category</MenuItem>
                 </Link>
                 <Link as={NavLink} to={`/courses/${"Intermidiate"}`}>
-                  <MenuItem>Intermedio</MenuItem>
+                  <MenuItem>Level</MenuItem>
                 </Link>
                 <Link as={NavLink} to={"/courses"}>
-                  <MenuItem>TODOS</MenuItem>
+                  <MenuItem>All</MenuItem>
                 </Link>
               </MenuList>
             </Menu>
@@ -119,12 +120,6 @@ export default function Simple() {
               >
                 <CartWidget />
               </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
             </Menu>
           </Flex>
         </Flex>
