@@ -1,5 +1,8 @@
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import React from 'react'
+import { Icon } from "@chakra-ui/react";
+import { FaShoppingCart } from "@chakra-ui/icons";
+
 
 const CartWidget = () => {
   return (
@@ -7,9 +10,10 @@ const CartWidget = () => {
     <Button colorScheme='teal' size='md' justifyContent='flex-end'>
  
     <span className="material-symbols-outlined">
-shopping_cart
+	<Icon as={FaShoppingCart} boxSize={6} color="green.500" />
+
 </span>
-<span>5</span>
+<ButtonGroup size="sm" isAttached variant="outline"/>
 </Button>
 </div>
   )
