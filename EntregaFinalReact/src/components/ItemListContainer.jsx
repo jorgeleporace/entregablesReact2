@@ -4,27 +4,30 @@ import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemListContainer = () => {
-  const [courses, setCourses] = useState([]);
-  const { category  } = useParams();
+  const [data, setData] = useState([]);
+  const { category } = useParams();
 
   useEffect(() => {
     const db = getFirestore();
     const coursesCollection = collection(db, "cursoDeIngles");
-	console.log (coursesCollection)
+    console.log(coursesCollection);
     getDocs(coursesCollection).then((querySnapshot) => {
       const courses = querySnapshot.docs.map((doc) => ({
         ...doc.data(),
         id: doc.id,
       }));
-      setCourses(courses);
+      setData(courses);
     });
   }, []);
-console.log (courses)
-  const nameFilter = courses.filter((course) => course.category === category);
-
+  console.log(data);
+  const nameFilter = data.filter((course) => course.Category === category);
   return (
     <div>
-      {category ? <ItemList courses={nameFilter} /> : <ItemList courses={courses} />}
+      {category ? (
+        <ItemList courses={nameFilter} />
+      ) : (
+        <ItemList courses={data} />
+      )}
     </div>
   );
 };

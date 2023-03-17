@@ -23,19 +23,6 @@ const Item = ({ id, name, level, description, category, price, image }) => {
               <Image borderRadius="lg" src={image} />
               <Stack mt="6" spacing="3">
                 <Heading size="md">{name}</Heading>
-
-                <Text color="blue.800" fontSize="l">
-                  Category: {category}
-                </Text>
-				<Text color="blue.800" fontSize="l">
-                  CourseName: {name}
-                </Text>
-				<Text color="blue.800" fontSize="l">
-                  Description: {description}
-                </Text>
-				<Text color="blue.800" fontSize="l">
-                  CoursePrice: {price}
-                </Text>
                 <Text color="red.600" fontSize="xl">
                   Level: {level}
                 </Text>

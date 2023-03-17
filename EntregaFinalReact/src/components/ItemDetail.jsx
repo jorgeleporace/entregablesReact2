@@ -15,7 +15,7 @@ import {
   import { useEffect, useState } from "react";
   import { doc, getDoc, getFirestore } from "firebase/firestore";
   
-  const ItemDetail = ({ bikes }) => {
+  const ItemDetail = ({ courses }) => {
 	const { id } = useParams();
   
 	const [producto, setProducto] = useState([]);
@@ -23,50 +23,53 @@ import {
 	useEffect(() => {
 	  const db = getFirestore();
   
-	  const biciRef = doc(db, "bicicletas", `${id}`);
-  
-	  getDoc(biciRef).then((snapshot) => {
+	  const courseRef = doc(db, "cursoDeIngles", `${id}`);
+	  
+	  getDoc(courseRef).then((snapshot) => {
+		console.log(snapshot)
 		if (snapshot.exists()) {
 		  setProducto(snapshot.data());
 		} else {
 		  console.log("No such document!");
+		  
 		}
 	  });
 	}, []);
+	
   
-	const bikeFilter = bikes.filter((bike) => bike.id == id);
-  
+	const courseFilter = courses.filter((course) => course.Id == id);
+	console.log(courseFilter)
 	return (
 	  <>
-		{bikeFilter.map((bike) => (
-		  <div key={bike.id}>
+		{courseFilter.map((course) => (
+		  <div key={course.Id}>
 			<Center p="1rem">
 			  <Card className="card-main">
 				<CardBody>
-				  <Image borderRadius="lg" src={bike.image} />
+				  <Image borderRadius="lg" src={course.Image} />
 				  <Stack mt="6" spacing="3">
-					<Heading size="md">{bike.name}</Heading>
+					<Heading size="md">{course.Course}</Heading>
 					<Text color="blue.800" fontSize="l">
-					  Description: {bike.description}
+					  Description: {course.Description}
 					</Text>
 					<Text color="blue.800" fontSize="l">
-					  Category: {bike.category}
+					  Category: {course.Category}
 					</Text>
 					<Text color="red.600" fontSize="xl">
-					  Stock: {bike.stock}
+					  Level: {course.Level}
 					</Text>
 					<Text color="green.600" fontSize="xl">
-					  Price: U$D {bike.price}
+					  Price: U$D {course.Price}
 					</Text>
 				  </Stack>
 				</CardBody>
 				<Divider />
 				<CardFooter className="card-footer">
 				  <ItemCount
-					stock={bike.stock}
-					id={bike.id}
-					price={bike.price}
-					name={bike.name}
+					level={course.Level}
+					id={course.Id}
+					price={course.Price}
+					name={course.Course}
 				  />
 				</CardFooter>
 			  </Card>

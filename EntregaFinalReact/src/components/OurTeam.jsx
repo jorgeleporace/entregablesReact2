@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Box,
   IconButton,
@@ -29,7 +30,7 @@ const settings = {
 function OurTeam() {
   // As we have used custom buttons, we need a reference variable to
   // change the state
-  const [slider, setSlider] = (React.useState < Slider) | (null > null);
+  const [slider, setSlider] = useState();
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
@@ -42,8 +43,7 @@ function OurTeam() {
     {
       title: "Jorge Leporace",
       text: "English Teacher – ICAO Rater – UX UI Designer – Content Developer – Digital Marketing / Community Manager & Publicity / Growth Mkt – Full Stack Developer.",
-      "https://onlinegls.com/wp-content/uploads/2022/02/054B0747-27B5-43EC-A9E1-0F7F495095F2_1_201_a-scaled.jpeg":
-        "",
+	  image:"https://onlinegls.com/wp-content/uploads/2022/02/054B0747-27B5-43EC-A9E1-0F7F495095F2_1_201_a-scaled.jpeg",
     },
     {
       title: "Melody Penna",
@@ -116,7 +116,6 @@ function OurTeam() {
             backgroundSize="cover"
             backgroundImage={`url(${card.image})`}
           >
-            {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="600px" position="relative">
               <Stack
                 spacing={6}

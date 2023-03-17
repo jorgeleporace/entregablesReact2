@@ -38,7 +38,7 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
 
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={2} alignItems={"center"}>
             <Box>
               <Image
                 borderRadius="full"
@@ -94,14 +94,11 @@ export default function Simple() {
                 rightIcon={<ChevronDownIcon />}
                 m="5"
               >
-                Our Courses
+                Category
               </MenuButton>
               <MenuList className="menu-list">
-                <Link as={NavLink} to={`/courses/${"Beginner"}`}>
-                  <MenuItem>Category</MenuItem>
-                </Link>
-                <Link as={NavLink} to={`/courses/${"Intermidiate"}`}>
-                  <MenuItem>Level</MenuItem>
+                <Link as={NavLink} to={`/courses/${"Professional"}`}>
+                  <MenuItem>Professional</MenuItem>
                 </Link>
                 <Link as={NavLink} to={"/courses"}>
                   <MenuItem>All</MenuItem>
