@@ -62,7 +62,7 @@ function OurTeam() {
   return (
     <Box
       position={"relative"}
-      height={"600px"}
+      height={"900px"}
       width={"full"}
       overflow={"hidden"}
     >
@@ -122,13 +122,13 @@ function OurTeam() {
                 w={"full"}
                 maxW={"lg"}
                 position="absolute"
-                top="50%"
+                top="20%"
                 transform="translate(0, -50%)"
               >
-                <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+                <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}color="Black"> 
                   {card.title}
                 </Heading>
-                <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
+                <Text fontSize={{ base: "md", lg: "lg" }} color="Black">
                   {card.text}
                 </Text>
               </Stack>

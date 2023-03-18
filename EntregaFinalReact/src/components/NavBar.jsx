@@ -128,7 +128,8 @@ export default function Simple() {
         ) : null}
       </Box>
 
-      <Box p={4}>Clases de Inglés Online</Box>
+      <Box p={6} >START STUDYING ENGLISH WITH US NOW!</Box>
+	  
     </>
   );
 }
