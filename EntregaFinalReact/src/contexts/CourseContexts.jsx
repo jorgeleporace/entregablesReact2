@@ -6,8 +6,9 @@ export const CourseProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   return (
-    <Course.Provider value={[cart, setCart]}>
+    <CourseContext.Provider value={[cart, setCart]}>
       {children}
-    </Course.Provider>
+    </CourseContext.Provider>
   );
 };
+export default CourseContext;

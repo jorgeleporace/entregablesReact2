@@ -22,13 +22,15 @@ import {
       if (name === "" || email === "") {
         alert("No pueden existir campos vacios");
       } else {
+       
         addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
+        
       }
       setEmail(" ");
     };
   
     const db = getFirestore();
-    const ordersCollection = collection(db, "orden");
+    const ordersCollection = collection(db, "orders");
   
     const order = {
       name,
@@ -43,12 +45,12 @@ import {
   
         <Container>
           <FormControl>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
               <FormLabel>NAME</FormLabel>
               <Input size="lg" onChange={(e) => setName(e.target.value)} />
               <FormLabel>EMAIL</FormLabel>
-              <Input size="lg" onChange={(e) => setEmail(e.target.value)} />
-              <Button colorScheme="blue" type="submit" m={5}>
+			  <Input size="lg" onChange={(e) => setEmail(e.target.value)} />
+              <Button colorScheme="blue" type="submit" m={5} >
                 Send Infomation
               </Button>
             </form>

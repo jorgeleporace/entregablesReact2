@@ -10,10 +10,12 @@ import OurTeam from "./components/OurTeam";
 import Cart from "./components/Cart";
 import NotFound from "./components/NotFound";
 import Translations from "./components/Translations";
+import { CourseProvider } from "./contexts/CourseContexts";
 import Footer from "./components/Footer";
 
 const App = () => {
   return (
+    <CourseProvider>
     <BrowserRouter>
       <NavBar />
 
@@ -21,7 +23,7 @@ const App = () => {
         <Route
           exact
           path="/"
-          element={<Welcome greeting={"Bienvenidos a GlS"} />}
+          element={<Welcome greeting={"Bienvenidos a GLS"} />}
         />
         <Route exact path="/courses" element={<ItemListContainer />} />
         <Route exact path="/ourteam" element={<OurTeam />} />
@@ -37,6 +39,7 @@ const App = () => {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </CourseProvider>
   );
 };
 

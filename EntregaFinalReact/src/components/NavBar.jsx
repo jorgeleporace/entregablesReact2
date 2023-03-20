@@ -49,7 +49,7 @@ export default function Simple() {
             </Box>
             <Box p="10" w="300px" h="100">
               <Heading size="md">
-                <Link to={"/"}>HOME</Link>
+                <Link as={NavLink} to={"/"}>HOME</Link>
               </Heading>
             </Box>
             <HStack
@@ -108,15 +108,20 @@ export default function Simple() {
           </Box>
           <Flex alignItems={"center"}>
             <Menu>
+            <Link as={NavLink} to={"/cart"}> 
               <MenuButton
                 as={Button}
                 rounded={"full"}
                 variant={"link"}
                 cursor={"pointer"}
                 minW={0}
+               
               >
+                 
                 <CartWidget />
+                
               </MenuButton>
+              </Link>
             </Menu>
           </Flex>
         </Flex>
@@ -128,8 +133,7 @@ export default function Simple() {
         ) : null}
       </Box>
 
-      <Box p={6} >START STUDYING ENGLISH WITH US NOW!</Box>
-	  
+      <Box p={4}>Clases de Inglés Online</Box>
     </>
   );
 }

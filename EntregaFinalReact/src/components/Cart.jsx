@@ -16,8 +16,8 @@ import {
 	Text,
   } from "@chakra-ui/react";
   import { useState, useContext } from "react";
-  import { CourseContext } from "./Contexts/CourseContexts";
-  import SendOrder from "./SendOrder";
+  import { CourseContext } from "../contexts/CourseContexts.jsx";
+  import SendOrder from "./SendOrder.jsx";
   
   const Cart = () => {
 	const [cart, setCart] = useContext(CourseContext);
