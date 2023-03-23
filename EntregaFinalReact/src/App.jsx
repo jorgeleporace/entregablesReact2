@@ -23,7 +23,7 @@ const App = () => {
         <Route
           exact
           path="/"
-          element={<Welcome greeting={"Bienvenidos a GLS"} />}
+          element={<Welcome greeting={"Welcome to GLS"} />}
         />
         <Route exact path="/courses" element={<ItemListContainer />} />
         <Route exact path="/ourteam" element={<OurTeam />} />

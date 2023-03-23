@@ -23,6 +23,7 @@ const ItemCount = ({ level, id, price, name }) => {
   };
 
   const addToCart = () => {
+    alert("Product added to Cart!")
     setCart((currItems) => {
       const isItemFound = currItems.find((item) => item.Id === id);
       if (isItemFound) {

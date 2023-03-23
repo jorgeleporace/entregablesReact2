@@ -63,8 +63,8 @@ export default function Simple() {
               <Link as={NavLink} to={"/translations"}>
                 <MenuButton
                   as={Button}
-                  size="lg"
-                  variant="outline"
+                  size="md"
+                  variant="solid"
                   colorScheme="blue"
                   m="5"
                 >
@@ -76,8 +76,8 @@ export default function Simple() {
               <Link as={NavLink} to={"/ourteam"}>
                 <MenuButton
                   as={Button}
-                  size="lg"
-                  variant="outline"
+                  size="md"
+                  variant="solid"
                   colorScheme="blue"
                   m="5"
                 >
@@ -88,8 +88,8 @@ export default function Simple() {
             <Menu>
               <MenuButton
                 as={Button}
-                size="lg"
-                variant="outline"
+                size="md"
+                variant="solid"
                 colorScheme="blue"
                 rightIcon={<ChevronDownIcon />}
                 m="5"
@@ -133,7 +133,7 @@ export default function Simple() {
         ) : null}
       </Box>
 
-      <Box p={4}>Clases de Inglés Online</Box>
+      <Box p={4}>Online English Classes</Box>
     </>
   );
 }

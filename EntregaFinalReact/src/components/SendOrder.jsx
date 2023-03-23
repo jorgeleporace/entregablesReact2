@@ -20,12 +20,13 @@ import {
     const handleSubmit = (e) => {
       e.preventDefault();
       if (name === "" || email === "") {
-        alert("No pueden existir campos vacios");
+        alert("Fields can not be empty!");
       } else {
-       
+        alert("Order Sent To Cart!");
         addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
         
       }
+     
       setEmail(" ");
     };
   
@@ -49,7 +50,7 @@ import {
               <FormLabel>NAME</FormLabel>
               <Input size="lg" onChange={(e) => setName(e.target.value)} />
               <FormLabel>EMAIL</FormLabel>
-			  <Input size="lg" onChange={(e) => setEmail(e.target.value)} />
+              <Input size="lg" onChange={(e) => setEmail(e.target.value)} />
               <Button colorScheme="blue" type="submit" m={5} >
                 Send Infomation
               </Button>
